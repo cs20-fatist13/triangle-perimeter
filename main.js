@@ -14,7 +14,7 @@ function btnCLicked(distanceA, distanceB, distanceC, perimeter) {
 
     document.getElementById("Aoutput").innnerHTML = distanceA;
     document.getElementById("Boutput").innnerHTML = distanceB;
-    document.getElementById("Coutput").innnerHTML = distanceC; 
+    document.getElementById("Coutput").innnerHTML = distanceC;
     document.getElementById("perimeteroutput").innnerHTML = perimeter;
 }
 
