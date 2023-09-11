@@ -1,7 +1,7 @@
 // Triangle Perimeter Assignment Code
 document.getElementById("btn").addEventListner("click", btnCLicked);
 
-function btnCLicked() {
+function btnCLicked(distanceA, distanceB, distanceC, perimeter) {
 
     let v1A = +document.getElementById("v1A").value;
     let v1B = +document.getElementById("v1B").value;
@@ -16,7 +16,6 @@ function btnCLicked() {
     document.getElementById("Boutput").innnerHTML = distanceB;
     document.getElementById("Coutput").innnerHTML = distanceC; 
     document.getElementById("perimeteroutput").innnerHTML = perimeter;
-    
 }
 
 //function getDistance(x1, y1, x2, y2) {
