@@ -9,26 +9,24 @@ function btnCLicked() {
   let xC = +document.getElementById("xC").value;
   let yC = +document.getElementById("yC").value;
 
-  let AB = dist(xA, yA, xB, yB);
-  let AC = dist(xA, yA, xC, yC);
-  let BC = dist(xB, yB, xC, yC);
-  let perimeter = peri(distanceA, distanceB, distanceC);
+  let AB = getDistance(xA, yA, xB, yB);
+  let AC = getDistance(xA, yA, xC, yC);
+  let BC = getDistance(xB, yB, xC, yC);
+  let perimeter = getPerimeter(distanceA, distanceB, distanceC);
 
   document.getElementById("ABoutput").innnerHTML = AB;
   doccument.getElementById("ACoutput").innnerHTML = AC;
   document.getElementById("BCoutput").innnerHTML = BC;
   document.getElementById("Perimeteroutput").innnerHTML = perimeter;
 
-  function dist(x1, y1, x2, y2) {
+  function getDistance(x1, y1, x2, y2) {
     let xDistance = x2 - x1;
     let yDistance = y2 - y1;
     let distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
-    return distance;
   }
 
-  function peri(distanceA, distanceB, distanceC) {
+  function getPerimeter(distanceA, distanceB, distanceC) {
     let perimeter = distanceA + distanceB + distanceC;
-    return perimeter;
   }
 }
 
