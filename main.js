@@ -15,7 +15,7 @@ function btnCLicked() {
     let BC = dist(xB, yB, xC, yC);
     let perimeter = peri(distanceA, distanceB, distanceC);
 
-   
+
     document.getElementById("ABoutput").innnerHTML = AB;
     doccument.getElementById("ACoutput").innnerHTML = AC;
     document.getElementById("BCoutput").innnerHTML = BC;
