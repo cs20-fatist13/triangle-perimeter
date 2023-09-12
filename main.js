@@ -3,14 +3,24 @@ document.getElementById("btn").addEventListner("click", btnCLicked);
 
 function btnCLicked() {
 
-    let v1A = +document.getElementById("v1A").value;
-    let v1B = +document.getElementById("v1B").value;
-    let v1C = +document.getElementById("v1C").value;
+    let xA = +document.getElementById("xA").value;
+    let yA = +document.getElementById("yA").value;
+    let xB = +document.getElementById("xB").value;
+    let yB = +document.getElementById("yB").value;
+    let xC = +document.getElementById("xC").value;
+    let yC = +document.getElementById("yC").value;
 
-    document.getElementById("Aoutput").innnerHTML = getDistance(v1A, v1B, v1C, v1D);
-    document.getElementById("Boutput").innnerHTML = getDistance(v2A, v2B, v2C, v2D);
-    document.getElementById("Coutput").innnerHTML = getDistance(v3A, v3B, v3C, v3D);
-    document.getElementById("perimeteroutput").innnerHTML = getPerimeter;
+   let distanceA = getDistance(xA, yA, xB, yB);
+    let distanceB = getDistance(xB, yB, xC, yC);
+    let distanceC = getDistance(xC, yC, xA, yA);
+    let perimeter = getPerimeter(distanceA, distanceB, distanceC);
+
+   
+    document.getElementById("ABoutput").innnerHTML = distanceA + distanceB;
+    doccument.getElementById("acoutput").innnerHTML = distanceA + distanceC;
+    document.getElementById("bcoutput").innnerHTML = distanceB + distanceC;
+    document.getElementById("Perimeteroutput").innnerHTML = perimeter;
+    
 }
 
 function getDistance(x1, y1, x2, y2) {
