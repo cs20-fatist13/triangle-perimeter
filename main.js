@@ -32,15 +32,3 @@ function getPerimeter(distanceA, distanceB, distanceC) {
   let perimeter = distanceA + distanceB + distanceC;
   return perimeter;
 }
-
-//function dist(x1, y1, x2, y2) {
-//let xDistance = x2 - x1;
-//let yDistance = y2 - y1;
-//let distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
-//return distance;
-//}
-
-//function peri(distanceA, distanceB, distanceC) {
-//let perimeter = distanceA + distanceB + distanceC;
-//return perimeter;
-//}
