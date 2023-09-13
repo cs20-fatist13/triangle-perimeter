@@ -1,7 +1,9 @@
 // Triangle Perimeter Assignment Code
-document.getElementById("btn").addEventListner("click", btnCLicked);
+document.getElementById("btn").addEventListener("click", btnClicked);
 
-function btnCLicked() {
+document.getElementById("btn").addEventListener("click", btnClicked);
+
+function btnClicked() {
   let xA = +document.getElementById("xA").value;
   let yA = +document.getElementById("yA").value;
   let xB = +document.getElementById("xB").value;
@@ -12,22 +14,24 @@ function btnCLicked() {
   let AB = getDistance(xA, yA, xB, yB);
   let AC = getDistance(xA, yA, xC, yC);
   let BC = getDistance(xB, yB, xC, yC);
-  let perimeter = getPerimeter(distanceA, distanceB, distanceC);
+  let perimeter = getPerimeter(AB, AC, BC);
 
-  document.getElementById("ABoutput").innnerHTML = AB;
-  doccument.getElementById("ACoutput").innnerHTML = AC;
-  document.getElementById("BCoutput").innnerHTML = BC;
-  document.getElementById("Perimeteroutput").innnerHTML = perimeter;
+  document.getElementById("ABoutput").innerHTML = AB.toFixed(2);
+  document.getElementById("ACoutput").innerHTML = AC.toFixed(2);
+  document.getElementById("BCoutput").innerHTML = BC.toFixed(2);
+  document.getElementById("Perimeteroutput").innerHTML = perimeter.toFixed(2);
+}
 
-  function getDistance(x1, y1, x2, y2) {
-    let xDistance = x2 - x1;
-    let yDistance = y2 - y1;
-    let distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
-  }
+function getDistance(x1, y1, x2, y2) {
+  let xDistance = x2 - x1;
+  let yDistance = y2 - y1;
+  let distance = Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+  return distance;
+}
 
-  function getPerimeter(distanceA, distanceB, distanceC) {
-    let perimeter = distanceA + distanceB + distanceC;
-  }
+function getPerimeter(distanceA, distanceB, distanceC) {
+  let perimeter = distanceA + distanceB + distanceC;
+  return perimeter;
 }
 
 //function dist(x1, y1, x2, y2) {
